@@ -24,8 +24,10 @@ public class Demo {
         Demo.loginDemoUI.findInputLastName().sendKeys("LastName");
         Demo.loginDemoUI.findInputCompany().sendKeys("ABCompany");
         Demo.loginDemoUI.findInputPhoneNumber().sendKeys("+84123456789");
-        Demo.loginDemoUI.findCountry();
-        Demo.loginDemoUI.findInterest();
+        Demo.loginDemoUI.findSelectCountry().click();
+        Demo.loginDemoUI.findCountry().click();
+        Demo.loginDemoUI.findSelectInterest().click();
+        Demo.loginDemoUI.findInterest().click();
         Demo.loginDemoUI.findInputComments().sendKeys("Comments");
         Demo.loginDemoUI.findCheckboxPolicy().click();
         Demo.loginDemoUI.findButtonLetsTalk().click();

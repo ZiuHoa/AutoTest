@@ -39,6 +39,9 @@ public class LoginDemoUI {
     public WebElement findInputPhoneNumber() {
         return driver.findElement(By.xpath("//input[@id='Phone']"));
     }
+    public WebElement findSelectCountry() {
+        return driver.findElement(By.xpath("//select[@id='Country']"));
+    }
     public WebElement findCountry() {
         return driver.findElement(By.xpath("//option[@value='Angola']"));
     }
