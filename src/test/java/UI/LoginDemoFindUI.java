@@ -4,14 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LoginDemoUI {
+public class LoginDemoFindUI {
     private WebDriver driver;
 
     public void LoginPageUI(WebDriver driver) {
         this.driver = driver;
     }
 
-    public LoginDemoUI(WebDriver driver) {
+    public LoginDemoFindUI(WebDriver driver) {
         this.driver = driver;
     }
 
