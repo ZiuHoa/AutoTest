@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-class dropdownSelectExample {
+class dropdownSelectExampleTest {
         private WebDriver driver;
-        public dropdownSelectExample(WebDriver driver) {
+        public dropdownSelectExampleTest(WebDriver driver) {
             this.driver = driver;
         }
 
@@ -21,5 +21,6 @@ public static void main(String[] args) throws InterruptedException {
     //select.selectByValue("Replace DIY (In-house) Testing");
     //select.selectByIndex(6);
     select.selectByVisibleText("CI/CD Pipeline Optimization ");
+    driver.quit();
         }
 }

@@ -4,16 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
 import java.util.List;
 
 class multiCheckBox {
-//    private WebDriver driver;
-//    public multiCheckBox(WebDriver driver) {
-//        this.driver = driver;
-//    }
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -30,6 +25,6 @@ class multiCheckBox {
             checkbox.click();
             System.out.println("Checkbox value selected: " + checkbox.getAttribute("value"));
         }
-
+        driver.quit();
     }
 }
