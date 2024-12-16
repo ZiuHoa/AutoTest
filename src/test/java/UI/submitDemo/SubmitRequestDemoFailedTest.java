@@ -5,13 +5,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class submitFailed {
+public class SubmitRequestDemoFailedTest {
     private WebDriver driver;
     private static LoginDemoFindUI loginDemoFindUI;
-    public submitFailed(WebDriver driver) {
+    public SubmitRequestDemoFailedTest(WebDriver driver) {
         this.driver = driver;
         this.loginDemoFindUI = new LoginDemoFindUI(driver);
     }
@@ -20,10 +22,13 @@ public class submitFailed {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://saucelabs.com/request-demo");
-        submitFailed submitFailed = new submitFailed(driver);
+        SubmitRequestDemoFailedTest submitFailed = new SubmitRequestDemoFailedTest(driver);
         submitFailed.loginDemoFindUI.findInputEmail().sendKeys("duyhoa.ic29@gmail.com");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        submitFailed.loginDemoFindUI.findInputFirstName().sendKeys("FirstName");
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        //submitFailed.loginDemoFindUI.findInputFirstName().sendKeys("FirstName");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebElement emailField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='FirstName']")));
+        emailField.sendKeys("FirstName");
         submitFailed.loginDemoFindUI.findInputLastName().sendKeys("LastName");
         //submitFailed.loginDemoUI.findInputCompany().sendKeys("ABCompany");
         submitFailed.loginDemoFindUI.findInputPhoneNumber().sendKeys("+84123456789");
