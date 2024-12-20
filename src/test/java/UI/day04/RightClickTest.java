@@ -11,7 +11,7 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
-class rightClickTest {
+class RightClickTest {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();

@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-class dropdownSelectExampleTest {
+class DropdownSelectExampleTest {
         private WebDriver driver;
-        public dropdownSelectExampleTest(WebDriver driver) {
+        public void dropdownSelectExampleTest(WebDriver driver) {
             this.driver = driver;
         }
 
